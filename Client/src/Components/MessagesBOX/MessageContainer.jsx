@@ -3,14 +3,13 @@ import MessageInput from './MessageInput'
 import Messages from './Messages'
 import ForumIcon from '@mui/icons-material/Forum';
 export default function MessageContainer() {
-  const nochatselected= true
+const nochatselected= true
 
   return (
     <div className='md:min-w-[450px] flex flex-col flex-wrap  w-full'>
-      {nochatselected?<NoChatSelected/>: (
+      {nochatselected?<NoChatSelected/>:(
       <><div className='bg-slate-500 px-4 py-2 mb-2 m-2'>
-      <span className='label-text'>To: </span>
-      <span className="text-gray-900 font-bold">Supriya</span>
+      <span className='label-text'>To : </span> <span className="text-gray-900 font-bold">Supriya</span>
       </div>
       <Messages/>
       <MessageInput/></>
@@ -18,7 +17,7 @@ export default function MessageContainer() {
     </div>
   )
 }
-
+ 
 const NoChatSelected=()=>{
   return(
     <div className="flex items-center justify-center w-full h-full">

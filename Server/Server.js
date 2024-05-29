@@ -1,5 +1,6 @@
 import express  from "express"
 import env  from "dotenv"
+import cors from "cors"
 import authRoutes from "./Routers/AuthRouter.js"
 import MessageRoutes from "./Routers/MessageRoutes.js"
 import cookieParser from "cookie-parser"
@@ -7,6 +8,7 @@ import userRoutes from "./Routers/userRouter.js"
 import { ConnectTodb } from "./db/connectToDB.js"
 let port= process.env.PORT || 3000
 let app=express();
+app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
 env.config()

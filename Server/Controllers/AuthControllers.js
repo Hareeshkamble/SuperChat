@@ -144,7 +144,7 @@ let login = async (req, res) => {
 let logout = async (req, res) => {
 try {
     res.cookie("jwt","",{maxAge:0})
-    res.status(200).send("Logged Out Successfully")
+    res.status(200).json({message:"Logged Out Successfully"})
 } catch (error) {
     console.log("Error occurred during Logout:", error.message);
         res.status(500).json({
